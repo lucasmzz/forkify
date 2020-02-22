@@ -25,10 +25,10 @@ const controlSearch = async () => {
         SearchView.renderResults(state.search.result);
     }
 }
+
 const search = new Search('pizza');
 
 elements.searchForm.addEventListener('submit',e => {
     e.preventDefault();
     controlSearch();
-    search.getResults();
 });
