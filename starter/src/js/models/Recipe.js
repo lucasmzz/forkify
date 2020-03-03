@@ -31,4 +31,10 @@ export default class Recipe {
     calcServings() {
         this.servings = 4;
     }
+
+    updateServings(type){
+        const newServings = type === 'dec' ? this.servings -1 : this.servings + 1;
+        this.servings = newServings;
+    }
+    
 }

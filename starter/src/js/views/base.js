@@ -4,8 +4,10 @@ export const elements = {
     searchRes: document.querySelector('.results'),
     searchResultList: document.querySelector('.results__list'),
     searchResPages: document.querySelector('.results__pages'),
-    recipePane: document.querySelector('.recipe'),
-    recipeIngredients: document.querySelector('.recipe__ingredient-list')
+    recipe: document.querySelector('.recipe'),
+    recipeIngredients: document.querySelector('.recipe__ingredient-list'),
+    servingsMinus: document.querySelector('#icon-circle-with-minus'),
+    servingsPlus: document.querySelector('#icon-circle-with-plus'),
 };
 
 export const elementStrings = {

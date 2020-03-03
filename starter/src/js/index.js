@@ -54,7 +54,7 @@ const controlRecipe = async () => {
         
         // Prepare UI 
         RecipeView.clearResult();
-        renderLoader(elements.recipePane);
+        renderLoader(elements.recipe);
 
         // fetch recipe details
         await state.recipe.getRecipe();
@@ -65,3 +65,15 @@ const controlRecipe = async () => {
 };
 
 window.addEventListener('hashchange', controlRecipe);
+
+elements.recipe.addEventListener('click', e => {
+    const target = e.target.closest('button');
+        if (target.matches('.btn-increase')){
+            state.recipe.updateServings('inc');
+        }else if (target.matches('.btn-decrease')){
+            state.recipe.updateServings('dec');
+        }
+        
+        RecipeView.renderRecipe(state.recipe);
+});
+

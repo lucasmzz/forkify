@@ -1,7 +1,7 @@
 import { elements } from './base';
 
 export const clearResult = () => {
-    elements.recipePane.innerHTML = '';
+    elements.recipe.innerHTML = '';
 };
 
 const renderIngredient = ingredient => {
@@ -47,12 +47,12 @@ export const renderRecipe = recipe => {
                 <span class="recipe__info-text"> servings</span>
 
                 <div class="recipe__info-buttons">
-                    <button class="btn-tiny">
+                    <button class="btn-tiny btn-decrease">
                         <svg>
                             <use href="img/icons.svg#icon-circle-with-minus"></use>
                         </svg>
                     </button>
-                    <button class="btn-tiny">
+                    <button class="btn-tiny btn-increase">
                         <svg>
                             <use href="img/icons.svg#icon-circle-with-plus"></use>
                         </svg>
@@ -95,5 +95,6 @@ export const renderRecipe = recipe => {
         </div>
     `;
 
-    elements.recipePane.insertAdjacentHTML('afterbegin', markup);
+    elements.recipe.insertAdjacentHTML('afterbegin', markup);
+    
 };
